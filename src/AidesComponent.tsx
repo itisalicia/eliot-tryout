@@ -3,11 +3,11 @@ import CardComponent from "./CardComponent.js";
 
 function AidesComponent() {
   return (
-    <main>
+    <section>
       {AIDES.map((aide) => (
         <CardComponent key={aide.id} aide={aide} />
       ))}
-    </main>
+    </section>
   );
 }
 

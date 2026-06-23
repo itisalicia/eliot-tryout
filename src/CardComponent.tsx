@@ -22,7 +22,7 @@ function CardComponent({ aide }: { aide: Aide }) {
           {aide.type}
         </span>
       </div>
-      <p className="text-sm text-gray-500 font-medium">Organisme</p>
+      <p className="text-sm text-gray-500 font-medium">{aide.organisme}</p>
 
       <div className="px-6 py-4 space-y-4">
         <p className="text-sm text-gray-700 leading-relaxed">
@@ -58,7 +58,10 @@ function CardComponent({ aide }: { aide: Aide }) {
           </p>
           <div className="flex flex-wrap gap-2">
             {aide.secteurs.map((secteur) => (
-              <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-indigo-50 text-indigo-700">
+              <span
+                key={secteur}
+                className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-indigo-50 text-indigo-700"
+              >
                 {secteur}
               </span>
             ))}
@@ -71,7 +74,10 @@ function CardComponent({ aide }: { aide: Aide }) {
           </p>
           <div className="flex flex-wrap gap-2">
             {aide.regions.map((region) => (
-              <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-emerald-50 text-emerald-700">
+              <span
+                key={region}
+                className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-emerald-50 text-emerald-700"
+              >
                 {region}
               </span>
             ))}
